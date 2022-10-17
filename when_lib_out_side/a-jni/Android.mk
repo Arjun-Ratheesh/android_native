@@ -14,14 +14,7 @@
 #
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE :=hello-jni-ar
-LOCAL_SRC_FILES_arm := /libs/armeabi-v7a/hello-jni.so
-LOCAL_MODULE_SUFFIX :=.so
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_PRODUCT_MODULE := true
-LOCAL_CHECK_ELF_FILES := false
-LOCAL_MODULE_PATH := $(PRODUCT_OUT)/system/lib
-include $(BUILD_PREBUILT)
-#include $(PREBUILT_SHARED_LIBRARY)
+LOCAL_MODULE    := hello-jni
+LOCAL_SRC_FILES := hello-jni.c
 
+include $(BUILD_SHARED_LIBRARY)
